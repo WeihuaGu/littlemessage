@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         if(messagetext.getText().length()==0)
             return;
 
-        if(phonenum.getText().toString() !=null){
+        if(phonenum.getText().length()>0){
             if(sendnum.getText().length()>0){
                 if(sendnum.getText().toString().startsWith("root")){
                     String numberstr=sendnum.getText().toString().substring(4);
@@ -105,6 +105,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendMessage(String number, String message){
+
+        Log.v("start to send:","num is :"+number);
         String SENT = "sms_sent";
         String DELIVERED = "sms_delivered";
 
