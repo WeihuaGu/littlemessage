@@ -13,6 +13,7 @@ import android.content.IntentFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import weihuagu.com.lmessage.util.PhoneNumber;
 
@@ -152,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
 
         SmsManager smsm = SmsManager.getDefault();
         smsm.sendTextMessage(number, null, message, sentPI, deliveredPI);
+        Toast.makeText(getApplicationContext(), "发送成功，号码"+number+"内容："+message,
+                Toast.LENGTH_SHORT).show();
     }
 
 
