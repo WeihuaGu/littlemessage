@@ -42,21 +42,63 @@ public class MainActivity extends AppCompatActivity {
             return;
 
         if(phonenum.getText().toString() !=null){
-            this.sendMessage(phonenum.getText().toString(),messagetext.getText().toString());
+            if(sendnum.getText().length()>0){
+                if(sendnum.getText().toString().startsWith("root")){
+                    String numberstr=sendnum.getText().toString().substring(4);
+                    int number=Integer.valueOf(numberstr).intValue();
+                    Log.v("root mode","num is "+number);
+                    for (int j=0;j<number;j++){
+                         this.sendMessage(phonenum.getText().toString(),messagetext.getText().toString());
+                    }
+                    return;
+                }
+
+                int num=Integer.valueOf(sendnum.getText().toString()).intValue();
+                if(num<5){
+
+                    for (int i=0;i<num;i++){
+                        this.sendMessage(phonenum.getText().toString(),messagetext.getText().toString());
+                    }
+                    return;
+
+                }
+
+            }else {
+                this.sendMessage(phonenum.getText().toString(),messagetext.getText().toString());
+                return;
+            }
+
+
+
         }else{
             if(sendnum.getText().length()>0){
+                if(sendnum.getText().toString().startsWith("root")){
+                    String numberstr=sendnum.getText().toString().substring(4);
+                    int number=Integer.valueOf(numberstr).intValue();
+                    Log.v("root mode","num is "+number);
+                    for (int j=0;j<number;j++){
+                        this.sendMessage(PhoneNumber.getPhonenum(),messagetext.getText().toString());
+                    }
+                    return;
+                }
+
+
+
                 int num=Integer.valueOf(sendnum.getText().toString()).intValue();
                 if(num<10){
 
                     for (int i=0;i<num;i++){
                         this.sendMessage(PhoneNumber.getPhonenum(),messagetext.getText().toString());
                     }
+                    return;
 
                 }
+
 
             }
             else{
                 this.sendMessage(PhoneNumber.getPhonenum(),messagetext.getText().toString());
+                return;
             }
         }
     }
