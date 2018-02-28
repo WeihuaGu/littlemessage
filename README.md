@@ -6,4 +6,6 @@
 ### 发送的次数，如果太大，只会发送少量次。如果你知道自己在干嘛，可以给发送次数前加root,比如"root38"
 
 
-|   ![](http://image.coolapk.com/apk_image/2017/1224/Screenshot_20171224-154216-172083-o_1c23o9vms1ea7afvj5m1nnv9tg13-uid-685151@1080x1920.png.t.jpg)      | 
+|应用截图 |
+| -:- |
+| ![](http://image.coolapk.com/apk_image/2017/1224/Screenshot_20171224-154216-172083-o_1c23o9vms1ea7afvj5m1nnv9tg13-uid-685151@1080x1920.png.t.jpg) | 
